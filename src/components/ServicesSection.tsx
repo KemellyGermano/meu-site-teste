@@ -15,7 +15,7 @@ const services = [
   },
   {
     icon: <Smartphone className="w-6 h-6 text-orange-500" />,
-    title: "Aplicativos para android",
+    title: "Aplicativos para Android",
     description:
       "Desenvolvemos dashboards, aplicativos e sites que encantam usuários e impulsionam resultados.",
   },
@@ -27,17 +27,17 @@ const services = [
   },
 ];
 
-export default function ProblemsSection() {
+export default function ServicesSection() {
   return (
     <section className="w-full bg-black text-white py-20">
-      <div className=" mx-auto text-center md:px-32 sm:px-24 lg:px-5">
+      <div className="mx-auto text-center md:px-32 sm:px-24 lg:px-5">
         {/* Subtítulo */}
         <h3 className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-3">
           O que fazemos
         </h3>
 
         {/* Título principal */}
-        <h2 className="text-3xl md:text-4xl font-bold leading-snug mb-4">
+        <h2 className="text-4xl md:text-5xl font-normal leading-snug mb-4">
           Empresa especializada em <br />
           desenvolvimento web e mobile
         </h2>

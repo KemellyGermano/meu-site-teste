@@ -55,7 +55,7 @@ const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <section className="text-white overflow-hidden">
+    <section id="depoimentos" className="text-white overflow-hidden">
       {/* Cabeçalho com padding lateral apenas */}
       <div className="text-center mt-10 mb-10 px-10 sm:px-16 md:px-24 lg:px-32">
         <span className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-6">

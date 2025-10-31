@@ -36,14 +36,17 @@ export default function ProjectsSection() {
   ];
 
   return (
-    <section className="w-full py-20 mt-20 border-t border-b border-white/10">
+    <section
+      id="cases"
+      className="w-full py-20 border-t border-b border-white/10"
+    >
       {/* Cabeçalho */}
       <div className="max-w-6xl mx-auto text-center mb-10">
         <div className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-3">
           Cases
         </div>
 
-        <h2 className="text-4xl md:text-5xl font-semibold text-white">
+        <h2 className="text-4xl md:text-5xl font-normal text-white">
           Projetos recentes
         </h2>
         <p className="text-[16px] mt-5">
@@ -54,14 +57,14 @@ export default function ProjectsSection() {
       </div>
 
       {/* Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-3">
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-[#002038] rounded-2xl overflow-hidden border border-white/10 transition-all duration-500"
+            className="bg-[#0c0e17] overflow-hidden border border-white/10 transition-all duration-500 rounded-xl"
           >
             {/* Imagem */}
-            <div className="aspect-[18/10] p-4 bg-[#002038] overflow-hidden flex items-center justify-center">
+            <div className="aspect-[18/10] p-4 bg-[#0c0e17] overflow-hidden flex items-center justify-center">
               <img
                 src={project.image}
                 alt={project.name}

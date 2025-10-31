@@ -64,16 +64,17 @@ const StatsSection: React.FC = () => {
 
   return (
     <section
+      id="nossos-numeros"
       ref={sectionRef}
-      className="w-full py-24 px-6 flex flex-col items-center text-center"
+      className="w-full py-10 flex flex-col items-center text-center"
     >
       {/* Título pequeno */}
-      <div className="text-yellow-400 text-sm font-medium bg-yellow-300/10 border border-yellow-400/40 px-3 py-1 rounded-sm inline-block mb-6">
+      <div className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-6">
         Nossos números falam por si
       </div>
 
       {/* Título principal */}
-      <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+      <h2 className="text-4xl md:text-5xl font-normal mb-4">
         Experiência, eficiência <br /> e entrega de verdade
       </h2>
 
@@ -86,7 +87,7 @@ const StatsSection: React.FC = () => {
       <div className="w-full max-w-6xl grid grid-cols-1 md:grid-cols-3 border-t border-white/10">
         {stats.map((stat, index) => (
           <div key={index} className="border border-white/10 py-12 px-8">
-            <h3 className="text-5xl font-semibold text-yellow-400 mb-4">
+            <h3 className="text-5xl font-semibold text-[#FF6633] mb-4">
               {stat.suffix === "%"
                 ? `${Math.floor(counts[index])}%`
                 : `+${Math.floor(counts[index])}`}

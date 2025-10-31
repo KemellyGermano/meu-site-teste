@@ -41,18 +41,18 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="w-full relative">
+    <section className="w-full relative mt-10">
       {/* Linha superior atravessando toda a tela */}
       <div className="absolute top-0 left-0 w-full border-t border-white/10" />
 
       {/* Cabeçalho */}
       <div className="max-w-6xl mx-auto text-start md:text-left mb-16 pt-16">
-        <div className="text-yellow-400 text-sm font-medium bg-yellow-300/10 border border-yellow-400/40 px-3 py-1 rounded-sm inline-block mb-6">
+        <div className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-6">
           Nosso processo
         </div>
 
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-          <h2 className="text-4xl md:text-5xl font-semibold leading-tight">
+          <h2 className="text-4xl md:text-5xl font-normal leading-tight">
             Sem fluxos complexos. <br /> Nosso foco é seu resultado.
           </h2>
 
@@ -71,7 +71,7 @@ export default function ProcessSection() {
             className="border border-white/10 p-10 flex flex-col gap-4"
           >
             {/* Número */}
-            <div className="bg-gradient-to-b from-yellow-400/30 to-transparent text-yellow-400 w-10 h-10 flex items-center justify-center rounded-md font-medium text-sm shadow-[0_0_10px_rgba(255,204,0,0.4)]">
+            <div className="bg-gradient-to-b from-[#FF6633] to-transparent text-[#ffffff] w-10 h-10 flex items-center justify-center rounded-md font-medium text-sm shadow-[0_0_10px_rgba(255,153,0,0.4)]">
               {step.number}
             </div>
 
@@ -84,7 +84,7 @@ export default function ProcessSection() {
             <ul className="flex flex-col gap-2 text-sm text-gray-300">
               {step.bullets.map((bullet, i) => (
                 <li key={i} className="flex items-start gap-2">
-                  <Check className="w-4 h-4 text-yellow-400 mt-0.5" />
+                  <Check className="w-4 h-4 text-[#FF6633] mt-0.5" />
                   {bullet}
                 </li>
               ))}

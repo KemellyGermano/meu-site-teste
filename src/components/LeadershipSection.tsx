@@ -4,7 +4,7 @@ import lider3 from "../images/leaders/Miguel.png";
 
 const leaders = [
   {
-    name: "Joel Germano",
+    name: "Kenero Germano",
     role: "CEO / Desenvolvedor Full-Stack",
     image: lider1,
     roleColor: "text-orange-500",
@@ -12,18 +12,18 @@ const leaders = [
   {
     name: "Tarcio Silva",
     role: "Desenvolvedor Full-Stack",
-    image: lider2,
     roleColor: "text-orange-500",
   },
   {
     name: "Carlos Miguel",
     role: "Desenvolvedor Full-Stack",
-    image: lider3, // ✅ agora a imagem é usada!
+    image: lider3,
     roleColor: "text-orange-500",
   },
   {
     name: "Mateus Alves",
     role: "Gerente de Produto",
+    image: lider2,
     roleColor: "text-orange-400",
   },
 ];
@@ -35,8 +35,7 @@ export default function LeadershipSection() {
         {/* === Texto à esquerda === */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-snug">
-            Conheça nossa <br />
-            liderança
+            Conheça nossa <br /> liderança
           </h2>
           <p className="text-gray-300 text-sm md:text-base leading-relaxed max-w-md">
             Desenvolvemos dashboards, aplicativos e sites que encantam usuários
@@ -45,65 +44,24 @@ export default function LeadershipSection() {
         </div>
 
         {/* === Lista de líderes à direita === */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10">
-          {/* Linha 1 */}
-          <div className="flex items-center gap-3">
-            <img
-              src={leaders[0].image}
-              alt={leaders[0].name}
-              className="w-12 h-12 rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-white text-sm">
-                {leaders[0].name}
-              </p>
-              <p className={`${leaders[0].roleColor} text-sm`}>
-                {leaders[0].role}
-              </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {leaders.map((leader, index) => (
+            <div key={index} className="flex items-center gap-3">
+              {leader.image && (
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+              )}
+              <div>
+                <p className="font-semibold text-white text-sm">
+                  {leader.name}
+                </p>
+                <p className={`${leader.roleColor} text-sm`}>{leader.role}</p>
+              </div>
             </div>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <img
-              src={leaders[1].image}
-              alt={leaders[1].name}
-              className="w-12 h-12 rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-white text-sm">
-                {leaders[1].name}
-              </p>
-              <p className={`${leaders[1].roleColor} text-sm`}>
-                {leaders[1].role}
-              </p>
-            </div>
-          </div>
-
-          {/* Linha 2 */}
-          <div className="flex items-center gap-3">
-            <img
-              src={leaders[2].image}
-              alt={leaders[2].name}
-              className="w-12 h-12 rounded-full object-cover"
-            />
-            <div>
-              <p className="font-semibold text-white text-sm">
-                {leaders[2].name}
-              </p>
-              <p className={`${leaders[2].roleColor} text-sm`}>
-                {leaders[2].role}
-              </p>
-            </div>
-          </div>
-
-          <div>
-            <p className="font-semibold text-white text-sm">
-              {leaders[3].name}
-            </p>
-            <p className={`${leaders[3].roleColor} text-sm`}>
-              {leaders[3].role}
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </section>

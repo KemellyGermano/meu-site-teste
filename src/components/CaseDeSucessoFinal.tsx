@@ -1,4 +1,4 @@
-import { Instagram, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 export default function CaseDeSucessoFinal() {
   return (
@@ -6,7 +6,7 @@ export default function CaseDeSucessoFinal() {
       {/* ==== SEÇÃO: Quer ser mais um case de sucesso ==== */}
       <section className="relative max-w-5xl mx-auto text-center py-24 px-6 md:px-10 rounded-2xl overflow-hidden">
         {/* BRILHO vindo de cima */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#002038] to-transparent blur-3xl " />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#002038] to-transparent blur-3xl" />
 
         {/* LINHAS DIAGONAIS DE FUNDO */}
         <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(135deg,#ffffff_1px,transparent_1px)] bg-[length:20px_20px]" />
@@ -40,15 +40,16 @@ export default function CaseDeSucessoFinal() {
       {/* ==== FOOTER FINAL ==== */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-3 gap-10 mt-20">
         {/* Coluna 1 - Logo */}
-        <div>
-          <div className="flex items-center gap-2 mb-4">
-            <div className="bg-[#F5C34A] p-1.5 rounded">
-              <ArrowUpRight className="text-black w-4 h-4" />
-            </div>
-            <span className="text-lg font-medium">Fronthor</span>
+        <div className="text-center">
+          <div className="flex justify-center mb-4">
+            <img
+              src="/images/logo-kejota-larger-1.png"
+              alt="Fronthor"
+              className="w-[125px] h-auto object-contain sm:w-[140px] md:w-[160px] lg:w-[180px] transition-all duration-300"
+            />
           </div>
           <p className="text-sm text-gray-400">
-            Fronthor © 2025 <br /> Todos os direitos reservados
+            Kejota Code © 2025 <br /> Todos os direitos reservados
           </p>
         </div>
 
@@ -58,21 +59,21 @@ export default function CaseDeSucessoFinal() {
           <div className="flex flex-wrap items-center gap-4">
             <a
               href="#"
-              className="flex items-center gap-2 hover:text-[#F5C34A] transition-colors"
+              className="flex items-center gap-2 hover:text-[#008CFF] transition-colors"
             >
-              <Instagram className="w-4 h-4 text-[#F5C34A]" />
+              <Instagram className="w-4 h-4 text-[#FF6633]" />
               Instagram
             </a>
             <a
               href="#"
-              className="flex items-center gap-2 hover:text-[#F5C34A] transition-colors"
+              className="flex items-center gap-2 hover:text-[#008CFF] transition-colors"
             >
-              <Linkedin className="w-4 h-4 text-[#F5C34A]" />
+              <Linkedin className="w-4 h-4 text-[#FF6633]" />
               LinkedIn
             </a>
           </div>
           <p className="text-sm text-gray-400 mt-6">
-            Desenvolvido por <span className="text-[#F5C34A]">thux</span>
+            Desenvolvido por <span className="text-[#FF6633]">Kejota</span>
           </p>
         </div>
 
@@ -81,16 +82,20 @@ export default function CaseDeSucessoFinal() {
           <h4 className="text-base font-medium mb-4">Contato</h4>
           <a
             href="mailto:marcos@fronthor.com"
-            className="flex items-center gap-2 hover:text-[#F5C34A] transition-colors"
+            className="flex items-center gap-2 hover:text-[#008CFF] transition-colors"
           >
-            <Mail className="w-4 h-4 text-[#F5C34A]" />
-            marcos@fronthor.com
+            <Mail className="w-4 h-4 text-[#FF6633]" />
+            Kenero@Kejota.com
           </a>
-          <p className="text-sm text-[#F5C34A] mt-6 flex items-center gap-1 cursor-pointer hover:underline">
+          <p
+            className="text-sm text-[#FF6633] mt-6 flex items-center gap-1 cursor-pointer hover:underline"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             ↑ Voltar ao topo
           </p>
         </div>
       </div>
+
       {/* ==== TEXTO GIGANTE TRANSLÚCIDO ==== */}
       <div className="relative border-t border-[#1C1C22] mt-20 h-[40vh] md:h-[30vh] overflow-hidden">
         {/* Texto gigante translúcido */}
