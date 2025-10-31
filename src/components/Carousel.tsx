@@ -1,10 +1,8 @@
 import React, { useRef, useEffect } from "react";
 
-import projeto1 from "../images/site1.jpg";
-import projeto2 from "../images/site2.jpg";
-import projeto3 from "../images/site3.jpg";
-import projeto4 from "../images/site4.jpg";
-import projeto5 from "../images/site5.jpg";
+import projeto1 from "../images/Gaming.png";
+import projeto2 from "../images/ListofGraphic.png";
+import projeto3 from "../images/uixNinja1.png";
 
 interface CarouselItem {
   image: string;
@@ -14,11 +12,9 @@ const items: CarouselItem[] = [
   { image: projeto1 },
   { image: projeto2 },
   { image: projeto3 },
-  { image: projeto4 },
-  { image: projeto5 },
 ];
 
-// duplicamos os itens para loop infinito
+// duplicamos para loop infinito
 const duplicatedItems = [...items, ...items];
 
 const Carousel: React.FC = () => {
@@ -28,22 +24,28 @@ const Carousel: React.FC = () => {
     const carousel = carouselRef.current;
     if (!carousel) return;
 
+    // ajusta a velocidade com base no tamanho da tela
+    const screenWidth = window.innerWidth;
+    let scrollStep = 0.6;
+
+    if (screenWidth <= 768) {
+      scrollStep = 1.2; // acelera no mobile
+    } else if (screenWidth <= 1024) {
+      scrollStep = 0.9; // tablets e notebooks
+    }
+
     let scrollAmount = 0;
-    const scrollStep = 0.6; // ajuste a velocidade
     let animationFrame: number;
 
     const scroll = () => {
-      if (!carousel) return;
-
       scrollAmount += scrollStep;
 
-      // reinicia o loop quando atingir metade do conteúdo
       if (scrollAmount >= carousel.scrollWidth / 2) {
         scrollAmount = 0;
+        carousel.scrollLeft = 0;
+      } else {
+        carousel.scrollLeft = scrollAmount;
       }
-
-      // importante: forçar scrollLeft diretamente
-      carousel.scrollLeft = scrollAmount;
 
       animationFrame = requestAnimationFrame(scroll);
     };
@@ -57,8 +59,7 @@ const Carousel: React.FC = () => {
     <section className="relative w-full overflow-hidden py-5 border-b border-white/10">
       <div
         ref={carouselRef}
-        className="flex gap-12 select-none whitespace-nowrap"
-        style={{ overflowX: "hidden" }} // impede scrollbar, mas permite scrollLeft
+        className="flex gap-12 select-none whitespace-nowrap will-change-transform overflow-hidden no-scrollbar"
       >
         {duplicatedItems.map((item, index) => (
           <div

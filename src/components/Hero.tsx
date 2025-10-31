@@ -1,45 +1,47 @@
-import { Figma, Atom } from "lucide-react";
-
 export default function Hero() {
   return (
-    <section className="relative flex flex-col items-center justify-center text-center px-4 sm:px-6 md:px-16 lg:px-32 py-16 sm:py-20 md:py-28 lg:py-32 overflow-hidden border-b border-white/10 z-0">
-      {/* Gradiente de fundo cobrindo toda a seção */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#000000] via-[#21170f] to-[#9C7E38] -z-10"></div>
+    <section className="relative flex flex-col items-center justify-center text-center h-[65vh] sm:h-[95vh] overflow-hidden">
+      {/* Fundo preto + brilhos ajustados para responsividade */}
+      <div className="absolute inset-0 bg-[#000000]">
+        {/* brilho laranja */}
+        <div
+          className="
+          absolute left-[15%] top-[45%] 
+          w-[120%] h-[100%] 
+          sm:right-[20%] sm:top-[45%] sm:w-[50%] sm:h-[60%] 
+          bg-[radial-gradient(circle,rgba(255,94,0,0.6)_0%,rgba(255,94,0,0.2)_40%,transparent_80%)] 
+          blur-[120px] sm:blur-[160px] mix-blend-screen
+        "
+        />
 
-      {/* Título Desktop */}
-      <div className="pt-28 hidden md:block">
-        <h1 className="text-2xl md:text-5xl lg:text-6xl font-normal leading-9 max-w-full md:max-w-4xl p-3 text-center">
-          Design{" "}
-          <Figma className="inline text-pink-400 mx-1 sm:mx-2 w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 align-middle" />{" "}
-          e Desenvolvimento{" "}
-          <Atom className="inline text-sky-400 mx-1 sm:mx-2 w-6 sm:w-8 md:w-10 h-6 sm:h-8 md:h-10 align-middle" />
-          <br />
-          <span className="text-yellow-200">de produtos de Ponta a Ponta</span>
-        </h1>
+        {/* brilho azul */}
+        <div
+          className="
+          absolute left-[-30%] bottom-[0%] 
+          w-[130%] h-[100%] 
+          sm:left-auto sm:right-[0%] sm:top-[45%] sm:w-[50%] sm:h-[60%] 
+          bg-[radial-gradient(circle,rgba(0,102,255,0.6)_0%,rgba(0,102,255,0.2)_40%,transparent_80%)] 
+          blur-[120px] sm:blur-[160px] mix-blend-screen
+        "
+        />
       </div>
 
-      {/* Título Mobile */}
-      <div className="pt-6 block md:hidden">
-        <h1 className="text-4xl font-normal leading-snug max-w-full sm:text-5xl md:text-4xl text-center">
-          Design e<br />
-          Desenvolvimento
-          <br />
-          <span className="text-yellow-200">
-            de produtos de <br /> Ponta a Ponta
-          </span>
+      {/* Conteúdo principal */}
+      <div className="relative z-10 flex flex-col items-center justify-center px-6 mt-14 py-6 sm:py-10 md:py-16">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight text-white max-w-3xl">
+          Construindo o <span className="text-[#FF6633]">Futuro</span>{" "}
+          <span className="text-[#008CFF]">Digital</span> do Seu Negócio
         </h1>
+
+        <p className="text-gray-300 text-sm sm:text-base md:text-lg max-w-2xl mt-4 sm:mt-5">
+          Desenvolvemos dashboards, aplicativos e sites que encantam usuários e
+          impulsionam resultados.
+        </p>
+
+        <button className="mt-9 sm:mt-8 md:mt-10 bg-gradient-to-r from-blue-900 via-blue-500 to-[#FF6633] text-white font-semibold px-10 py-4 rounded-xl text-lg shadow-[0_0_40px_rgba(255,120,0,0.3)] hover:scale-105 transition-transform duration-300">
+          Começar um projeto
+        </button>
       </div>
-
-      {/* Texto */}
-      <p className="text-gray-300 max-w-full sm:max-w-xl md:max-w-2xl lg:max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl px-5 mt-2 text-center">
-        Tenha squads de design e desenvolvimento trabalhando junto com seu time
-        para criar produtos que se destacam no mercado.
-      </p>
-
-      {/* Botão */}
-      <button className="mt-6 sm:mt-8 md:mt-10 bg-gradient-to-tr from-[#fec338] to-[#fed165] text-black font-semibold px-4 sm:px-5 md:px-6 py-2.5 sm:py-3 md:py-4 rounded-xl text-sm sm:text-base md:text-lg lg:text-xl border border-white/55 hover:scale-105 transition-transform duration-300">
-        Começar um projeto
-      </button>
     </section>
   );
 }

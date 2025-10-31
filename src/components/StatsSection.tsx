@@ -68,7 +68,7 @@ const StatsSection: React.FC = () => {
       className="w-full py-24 px-6 flex flex-col items-center text-center"
     >
       {/* Título pequeno */}
-      <div className="text-yellow-400 text-sm font-medium border border-yellow-400/40 px-3 py-1 rounded-sm mb-6">
+      <div className="text-yellow-400 text-sm font-medium bg-yellow-300/10 border border-yellow-400/40 px-3 py-1 rounded-sm inline-block mb-6">
         Nossos números falam por si
       </div>
 

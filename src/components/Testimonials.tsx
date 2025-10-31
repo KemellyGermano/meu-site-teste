@@ -55,19 +55,19 @@ const Testimonials: React.FC = () => {
   }, []);
 
   return (
-    <section className="text-white py-20 border-t border-b border-white/10 overflow-hidden px-5">
-      {/* Cabeçalho */}
-      <div className="text-center mb-16">
-        <span className="inline-block border border-yellow-400/40 bg-yellow-300/10 px-3 py-1 text-sm text-yellow-400 rounded-sm mb-6">
+    <section className="text-white overflow-hidden">
+      {/* Cabeçalho com padding lateral apenas */}
+      <div className="text-center mt-10 mb-10 px-10 sm:px-16 md:px-24 lg:px-32">
+        <span className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-6">
           Depoimentos
         </span>
-        <h2 className="text-5xl font-light">
+        <h2 className="md:text-5xl sm:text-3xl text-2xl font-light">
           Nosso foco sempre será seu{" "}
-          <span className="text-yellow-400 font-medium">resultado.</span>
+          <span className="text-[#FF6633] font-medium">resultado.</span>
         </h2>
       </div>
 
-      {/* Carrossel */}
+      {/* Carrossel (mantido igual ao original) */}
       <div
         ref={carouselRef}
         className="flex px-10 overflow-hidden select-none whitespace-nowrap"
@@ -75,7 +75,7 @@ const Testimonials: React.FC = () => {
         {duplicated.map((item, i) => (
           <div
             key={i}
-            className="flex-shrink-0 w-[440px] h-[280px] border border-white/10 backdrop-blur-sm px-8 py-8 whitespace-normal overflow-hidden"
+            className="flex-shrink-0 w-[440px] h-[280px] border border-white/10 bg-black px-8 py-8 whitespace-normal overflow-hidden"
           >
             <p className="text-gray-300 text-[15px] leading-relaxed mb-8 line-clamp-6">
               {item.quote}

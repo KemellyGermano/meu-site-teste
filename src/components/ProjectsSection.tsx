@@ -1,54 +1,56 @@
-import project1 from "../images/4.jpg";
-import project2 from "../images/3.jpg";
-import project3 from "../images/2.jpg";
-import project4 from "../images/1.jpg";
+import project1 from "../images/Projects/LosamoApp.png";
+import project2 from "../images/Projects/LosamoPay.png";
+import project3 from "../images/Projects/Losamo1.png";
+import project4 from "../images/Projects/Dom.png";
 
 export default function ProjectsSection() {
   const projects = [
     {
       id: 1,
       image: project1,
-      name: "pkFinance",
-      description: "Plataforma de Pool e Staking",
-      tags: ["UI/UX Design"],
+      name: "Losamo",
+      description:
+        "Desenvolvemos dashboards, aplicativos e sites que encantam usuários e impulsionam resultados.",
     },
     {
       id: 2,
       image: project2,
-      name: "AIWriters",
+      name: "Losamo Drive",
       description:
-        "Plataforma web de IA para personalização de mensagens, roteiros e textos personalizados",
-      tags: ["UI/UX Design", "Design System", "Framer Development"],
+        "Desenvolvemos dashboards, aplicativos e sites que encantam usuários e impulsionam resultados.",
     },
     {
       id: 3,
       image: project3,
-      name: "NovaPay",
+      name: "Losamo Dashboard",
       description:
-        "Solução de pagamentos digitais com integração instantânea e segurança aprimorada",
-      tags: ["Product Design", "Frontend", "Next.js"],
+        "Desenvolvemos dashboards, aplicativos e sites que encantam usuários e impulsionam resultados.",
     },
     {
       id: 4,
       image: project4,
-      name: "Growthly",
+      name: "Dom Pagamentos",
       description:
-        "Dashboard analítica com foco em crescimento e métricas de retenção",
-      tags: ["Dashboard", "UI/UX Design", "API Integration"],
+        "Desenvolvemos dashboards, aplicativos e sites que encantam usuários e impulsionam resultados.",
     },
   ];
 
   return (
-    <section className="w-full py-20 px-6 mt-20 border-t border-b border-white/10">
+    <section className="w-full py-20 mt-20 border-t border-b border-white/10">
       {/* Cabeçalho */}
       <div className="max-w-6xl mx-auto text-center mb-10">
-        <div className="inline-block border border-yellow-400/40 bg-yellow-300/10 px-3 py-1 text-sm text-yellow-400 rounded-sm mb-6">
-          O que fazemos de melhor
+        <div className="inline-block border border-orange-600/40 bg-black px-3 py-1 text-xs text-[#FF6633] rounded-sm mb-3">
+          Cases
         </div>
 
         <h2 className="text-4xl md:text-5xl font-semibold text-white">
           Projetos recentes
         </h2>
+        <p className="text-[16px] mt-5">
+          Desenvolvemos dashboards, aplicativos e sites que encantam usuários e{" "}
+          <br />
+          impulsionam resultados.
+        </p>
       </div>
 
       {/* Grid */}
@@ -56,14 +58,14 @@ export default function ProjectsSection() {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-[#0c0e17] rounded-2xl overflow-hidden border border-white/10 transition-all duration-500"
+            className="bg-[#002038] rounded-2xl overflow-hidden border border-white/10 transition-all duration-500"
           >
             {/* Imagem */}
-            <div className="aspect-[16/10] bg-[#0c0e17] overflow-hidden p-5">
+            <div className="aspect-[18/10] p-4 bg-[#002038] overflow-hidden flex items-center justify-center">
               <img
                 src={project.image}
                 alt={project.name}
-                className="w-full h-full object-cover rounded-t-2xl transition-transform duration-700 hover:scale-105"
+                className="max-w-full max-h-full object-contain rounded-xl transition-all duration-700 hover:scale-105 shadow-[0_0_40px_rgba(0,0,0,0.4)] hover:shadow-[0_0_60px_rgba(0,0,0,0.6)]"
               />
             </div>
 
@@ -75,17 +77,6 @@ export default function ProjectsSection() {
               <p className="text-gray-400 text-sm mb-3">
                 {project.description}
               </p>
-
-              <div className="flex flex-wrap gap-2">
-                {project.tags.map((tag, index) => (
-                  <span
-                    key={index}
-                    className="px-3 py-1 text-xs rounded-full border border-white/10 bg-white/5 text-gray-300 transition-all"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
             </div>
           </div>
         ))}

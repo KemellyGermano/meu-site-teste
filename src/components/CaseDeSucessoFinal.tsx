@@ -2,11 +2,11 @@ import { Instagram, Linkedin, Mail, ArrowUpRight } from "lucide-react";
 
 export default function CaseDeSucessoFinal() {
   return (
-    <footer className="w-full text-white">
+    <footer className="w-full text-white mt-16">
       {/* ==== SEÇÃO: Quer ser mais um case de sucesso ==== */}
       <section className="relative max-w-5xl mx-auto text-center py-24 px-6 md:px-10 rounded-2xl overflow-hidden">
         {/* BRILHO vindo de cima */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#252a3f] to-transparent blur-3xl opacity-70" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-b from-[#002038] to-transparent blur-3xl " />
 
         {/* LINHAS DIAGONAIS DE FUNDO */}
         <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(135deg,#ffffff_1px,transparent_1px)] bg-[length:20px_20px]" />
@@ -23,11 +23,11 @@ export default function CaseDeSucessoFinal() {
 
           {/* BOTÕES */}
           <div className="flex flex-col md:flex-row justify-center items-center gap-4 w-full max-w-2xl mx-auto">
-            <button className="w-full md:w-[250px] bg-gradient-to-tr from-[#fec338] to-[#fed165] hover:from-[#fed165] hover:to-[#ffe58a] text-black font-medium py-5 px-10 rounded-xl transition-all shadow-[0_0_25px_rgba(245,195,74,0.3)]">
+            <button className="w-full md:w-[250px] bg-[#008CFF] text-white font-medium py-5 px-10 rounded-xl">
               Começar um projeto
             </button>
 
-            <button className="w-full md:w-[250px] bg-[#2F2F34] border border-[#2C2C34] text-white hover:bg-[#1A1A22] py-5 rounded-xl font-medium transition-all">
+            <button className="w-full md:w-[250px] bg-[#FF6633] border border-[#2C2C34] text-white py-5 rounded-xl font-medium transition-all">
               Agendar consultoria gratuita
             </button>
           </div>
@@ -99,7 +99,7 @@ export default function CaseDeSucessoFinal() {
                  text-[20vw] md:text-[14vw] font-bold text-[#252a3f] 
                  select-none pointer-events-none whitespace-nowrap"
         >
-          Fronthor
+          Kejota
         </h1>
 
         {/* Overlay para escurecer o fundo */}

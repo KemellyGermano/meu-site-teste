@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 // importa suas logos
-import logo1 from "../images/lacoste.jpg";
-import logo2 from "../images/adidas2.jpg";
-import logo3 from "../images/nike2.jpg";
-import logo4 from "../images/nasa.jpg";
-import logo5 from "../images/puma.jpg";
-import logo6 from "../images/logoteste-removebg-preview.png";
-import logo7 from "../images/logoteste-removebg-preview.png";
+import logo1 from "../images/logo/LogoDefault 1.png";
+import logo2 from "../images/logo/image 1.png";
+import logo3 from "../images/logo/losamoLogo 1.png";
 
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
+const logos = [logo1, logo2, logo3];
 
 interface SingleColumnProps {
   offset?: number;
@@ -34,7 +30,7 @@ const SingleColumn: React.FC<SingleColumnProps> = ({
   }, [delay]);
 
   return (
-    <div className="relative w-[360px] md:w-[350px] h-[75px] overflow-hidden border border-white/10 bg-transparent flex justify-center items-center">
+    <div className="relative w-full h-[75px] overflow-hidden border border-white/10 bg-transparent flex justify-center items-center box-border">
       <div
         key={index}
         className="absolute animate-fadeSlide w-full flex justify-center items-center"
@@ -75,13 +71,13 @@ const SingleColumn: React.FC<SingleColumnProps> = ({
 
 const MobileClientsCarousel: React.FC = () => {
   return (
-    <section className="w-full py-16 px-4 flex flex-col items-center overflow-hidden border-b border-white/10 lg:hidden">
+    <section className="w-full bg-black py-12 px-10 flex flex-col items-center overflow-hidden border-b border-white/10 lg:hidden">
       <h3 className="text-gray-300 mb-8 text-sm text-center">
-        Mais de 40 empresas já confiam na <br />{" "}
-        <span className="font-semibold text-white">Fronthor</span>
+        Parcerias que confiam na <br />
+        <span className="font-semibold text-[#FFFFFF]">Kejota Code</span>
       </h3>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full max-w-[400px]">
         <SingleColumn offset={0} />
         <SingleColumn offset={2} />
         <SingleColumn offset={4} />

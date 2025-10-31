@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from "react";
 
 // importa suas logos
-import logo1 from "../images/logoteste-removebg-preview.png";
-import logo2 from "../images/logoteste-removebg-preview.png";
-import logo3 from "../images/logoteste-removebg-preview.png";
-import logo4 from "../images/logoteste-removebg-preview.png";
-import logo5 from "../images/logoteste-removebg-preview.png";
-import logo6 from "../images/logoteste-removebg-preview.png";
-import logo7 from "../images/logoteste-removebg-preview.png";
+import logo1 from "../images/logo/LogoDefault 1.png";
+import logo2 from "../images/logo/image 1.png";
+import logo3 from "../images/logo/losamoLogo 1.png";
+import logo4 from "../images/logo/logo-white.png";
 
-const logos = [logo1, logo2, logo3, logo4, logo5, logo6, logo7];
+const logos = [logo1, logo2, logo3, logo4];
 
 interface SingleColumnProps {
   offset?: number;
@@ -34,7 +31,7 @@ const SingleColumn: React.FC<SingleColumnProps> = ({
   }, [delay]);
 
   return (
-    <div className="relative w-[360px] lg:w-[260px] h-[75px] overflow-hidden border border-white/10 bg-transparent flex justify-center items-center">
+    <div className="relative bg-[#000000] w-[360px] lg:w-[260px] h-[75px] overflow-hidden border border-white/10 bg-transparent flex justify-center items-center">
       <div
         key={index}
         className="absolute animate-fadeSlide w-full flex justify-center items-center"
@@ -75,10 +72,10 @@ const SingleColumn: React.FC<SingleColumnProps> = ({
 
 const ClientsCarousel: React.FC = () => {
   return (
-    <section className="w-full py-20 flex-col items-center overflow-hidden border-b border-white/10 hidden lg:flex">
-      <h3 className="text-gray-300 mb-5 text-lg text-center">
-        Mais de 40 empresas já confiam na{" "}
-        <span className="font-semibold text-white">Fronthor</span>
+    <section className="w-full py-20 bg-black flex-col items-center overflow-hidden border-b border-white/10 hidden lg:flex">
+      <h3 className="text-gray-300 mb-8 text-sm text-center">
+        Parcerias que confiam na <br />
+        <span className="font-semibold text-[#FFFFFF]">Kejota Code</span>
       </h3>
 
       <div className="flex justify-center items-center">

@@ -41,10 +41,12 @@ const steps = [
 
 export default function ProcessSection() {
   return (
-    <section className="w-full px-6">
-      <div className="border-b border-white/10 mb-8"></div>
+    <section className="w-full relative">
+      {/* Linha superior atravessando toda a tela */}
+      <div className="absolute top-0 left-0 w-full border-t border-white/10" />
+
       {/* Cabeçalho */}
-      <div className="max-w-6xl mx-auto text-start md:text-left mb-16">
+      <div className="max-w-6xl mx-auto text-start md:text-left mb-16 pt-16">
         <div className="text-yellow-400 text-sm font-medium bg-yellow-300/10 border border-yellow-400/40 px-3 py-1 rounded-sm inline-block mb-6">
           Nosso processo
         </div>
